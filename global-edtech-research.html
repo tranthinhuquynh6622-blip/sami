@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global EdTech Research 2026 - EduTransform</title>
+    <meta name="description" content="Comprehensive research on global educational technology trends, market statistics, and adoption rates worldwide.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-data {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 0 60px;
+            color: white;
+        }
+
+        .hero-data h1 {
+            color: white;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+        }
+
+        .hero-data p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+        }
+
+        .update-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .research-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .research-section:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 1rem;
+        }
+
+        .region-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .region-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .region-header {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .region-flag {
+            font-size: 2.5rem;
+        }
+
+        .region-header h3 {
+            color: white;
+            margin: 0;
+        }
+
+        .region-content {
+            padding: 1.5rem;
+        }
+
+        .region-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .region-stat:last-child {
+            border-bottom: none;
+        }
+
+        .region-stat-label {
+            color: #6b7280;
+        }
+
+        .region-stat-value {
+            font-weight: 600;
+            color: #4f46e5;
+        }
+
+        .chart-container {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .bar-label {
+            min-width: 150px;
+            font-weight: 500;
+        }
+
+        .bar-wrapper {
+            flex: 1;
+            background: #f3f4f6;
+            border-radius: 50px;
+            overflow: hidden;
+            height: 40px;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            padding-left: 1rem;
+            color: white;
+            font-weight: 600;
+            transition: width 1s ease;
+        }
+
+        .insight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+
+        .insight-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .insight-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .insight-box li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .insight-box li i {
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-top: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -2.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .funding-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .funding-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            text-align: center;
+            border: 2px solid #e5e7eb;
+        }
+
+        .funding-card.highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+        }
+
+        .funding-card.highlight .funding-amount,
+        .funding-card.highlight .funding-label {
+            color: white;
+        }
+
+        .funding-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #4f46e5;
+        }
+
+        .funding-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .source-list {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f9fafb;
+            border-radius: 1rem;
+            border-left: 4px solid #4f46e5;
+        }
+
+        .source-list h4 {
+            margin-bottom: 1rem;
+            color: #4f46e5;
+        }
+
+        .source-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .source-list li {
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .source-list a {
+            color: #4f46e5;
+        }
+
+        @media (max-width: 768px) {
+            .stat-grid,
+            .region-grid,
+            .funding-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bar-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .bar-label {
+                min-width: auto;
+            }
+
+            .bar-wrapper {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    EduTransform
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="global-edtech-research.html" class="active">Research</a></li>
+                <li><a href="../index.html#contact" class="btn btn-outline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Data Section -->
+    <section class="hero-data">
+        <div class="container">
+            <div class="update-badge">
+                <i class="fas fa-sync-alt"></i>
+                Last Updated: March 2026
+            </div>
+            <h1>Global EdTech Research & Insights</h1>
+            <p>Comprehensive analysis of educational technology trends, market statistics, and adoption rates worldwide</p>
+        </div>
+    </section>
+
+    <!-- Global Market Size Section -->
+    <section class="research-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">🌍 Global EdTech Market Size</h2>
+                <p class="fade-in fade-in-delay-1">The educational technology market is experiencing explosive growth worldwide</p>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-value">$480B</div>
+                    <div class="stat-label">Market Size 2026 (McKinsey)</div>
+                </div>
+                <div class="stat-card fade-in fade-in-delay-1">
+                    <div class="stat-value">$1T+</div>
+                    <div class="stat-label">Projected by 2034 (Statista)</div>
+                </div>
+                <div class="stat-card fade-in fade-in-delay-2">
+                    <div class="stat-value">15%</div>
+                    <div class="stat-label">Annual Growth Rate (CAGR)</div>
+                </div>
+                <div class="stat-card fade-in fade-in-delay-3">
+                    <div class="stat-value">15B</div>
+                    <div class="stat-label">Users Expected by 2026</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">Market Value Projections</h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">2024</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 35%;">$194B</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">2025</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 43%;">$238B</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">2026</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 50%;">$480B</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">2030</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 75%;">$750B</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">2034</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 100%;">$1,000B+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Adoption Section -->
+    <section class="research-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">📊 Regional Adoption Rates</h2>
+                <p class="fade-in fade-in-delay-1">How different regions are embracing educational technology</p>
+            </div>
+
+            <div class="region-grid">
+                <!-- Asia Pacific -->
+                <div class="region-card fade-in">
+                    <div class="region-header">
+                        <span class="region-flag">🌏</span>
+                        <h3>Asia Pacific</h3>
+                    </div>
+                    <div class="region-content">
+                        <div class="region-stat">
+                            <span class="region-stat-label">Schools with Digital Learning</span>
+                            <span class="region-stat-value">65%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">AI Adoption in China</span>
+                            <span class="region-stat-value">70%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">Mobile App Growth (India)</span>
+                            <span class="region-stat-value">+55%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">VR Learning Growth</span>
+                            <span class="region-stat-value">+40%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">Growth Rate</span>
+                            <span class="region-stat-value">13% CAGR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Europe -->
+                <div class="region-card fade-in fade-in-delay-1">
+                    <div class="region-header">
+                        <span class="region-flag">🇪🇺</span>
+                        <h3>Europe</h3>
+                    </div>
+                    <div class="region-content">
+                        <div class="region-stat">
+                            <span class="region-stat-label">E-Learning Platform Adoption</span>
+                            <span class="region-stat-value">70%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">Cloud-Based Learning</span>
+                            <span class="region-stat-value">60%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">Smart Classroom Growth</span>
+                            <span class="region-stat-value">+45%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">Test Preparation Usage</span>
+                            <span class="region-stat-value">+40%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">Global Market Share</span>
+                            <span class="region-stat-value">25-28%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- North America -->
+                <div class="region-card fade-in fade-in-delay-2">
+                    <div class="region-header">
+                        <span class="region-flag">🇺🇸</span>
+                        <h3>North America</h3>
+                    </div>
+                    <div class="region-content">
+                        <div class="region-stat">
+                            <span class="region-stat-label">Global Market Share</span>
+                            <span class="region-stat-value">38-42%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">Personalized Learning Penetration</span>
+                            <span class="region-stat-value">67%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">Corporate e-Learning Spending</span>
+                            <span class="region-stat-value">$20B+</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">AI Investment (Private)</span>
+                            <span class="region-stat-value">$109B</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">EdTech Funding 2024</span>
+                            <span class="region-stat-value">$3.4B</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle East & Africa -->
+                <div class="region-card fade-in fade-in-delay-3">
+                    <div class="region-header">
+                        <span class="region-flag">🌍</span>
+                        <h3>Middle East & Africa</h3>
+                    </div>
+                    <div class="region-content">
+                        <div class="region-stat">
+                            <span class="region-stat-label">E-Learning Adoption</span>
+                            <span class="region-stat-value">45%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">Online Education Growth</span>
+                            <span class="region-stat-value">+40%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">AI Language Learning Growth</span>
+                            <span class="region-stat-value">+35%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">Students Without Digital Access</span>
+                            <span class="region-stat-value">30%</span>
+                        </div>
+                        <div class="region-stat">
+                            <span class="region-stat-label">UAE/Saudi Interactive Tools</span>
+                            <span class="region-stat-value">50%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI in Education Section -->
+    <section class="research-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">🤖 AI in Education Revolution</h2>
+                <p class="fade-in fade-in-delay-1">Artificial intelligence is transforming how we learn and teach</p>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-value">$80B+</div>
+                    <div class="stat-label">AI Education Market 2024</div>
+                </div>
+                <div class="stat-card fade-in fade-in-delay-1">
+                    <div class="stat-value">37%</div>
+                    <div class="stat-label">Annual Growth Rate</div>
+                </div>
+                <div class="stat-card fade-in fade-in-delay-2">
+                    <div class="stat-value">38%</div>
+                    <div class="stat-label">Personalized Learning Share</div>
+                </div>
+                <div class="stat-card fade-in fade-in-delay-3">
+                    <div class="stat-value">60%</div>
+                    <div class="stat-label">Educators Using AI</div>
+                </div>
+            </div>
+
+            <div class="insight-box fade-in">
+                <h3><i class="fas fa-lightbulb"></i> Key AI Education Insights</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>$487 billion</strong> - Personalized learning market projected by 2030</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>83%</strong> of K-12 teachers used generative AI in 2023-2024</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>12%</strong> average student score improvement with AI personalization</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>30%</strong> increase in learning efficiency reported</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>73%</strong> of students say AI helps them understand materials better</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>94.7%</strong> of students in South Korea use AI tools</li>
+                </ul>
+            </div>
+
+            <div class="chart-container">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">AI Adoption by Educators</h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">Using AI in Classroom</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 60%;">60%</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Daily AI Usage (Leaders)</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 47%;">47%</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Gen AI (K-12 Teachers)</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 83%;">83%</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Student Help Perception</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 73%;">73%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Trends Section -->
+    <section class="research-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">💰 Global EdTech Investment Trends</h2>
+                <p class="fade-in fade-in-delay-1">Funding patterns and investment activities worldwide</p>
+            </div>
+
+            <div class="funding-grid">
+                <div class="funding-card fade-in">
+                    <div class="funding-amount">$6.3B</div>
+                    <div class="funding-label">Total Funding 2024</div>
+                </div>
+                <div class="funding-card highlight fade-in fade-in-delay-1">
+                    <div class="funding-amount">$29.7B</div>
+                    <div class="funding-label">China (All-Time)</div>
+                </div>
+                <div class="funding-card fade-in fade-in-delay-2">
+                    <div class="funding-amount">$28.2B</div>
+                    <div class="funding-label">USA (All-Time)</div>
+                </div>
+                <div class="funding-card fade-in fade-in-delay-3">
+                    <div class="funding-amount">$11.5B</div>
+                    <div class="funding-label">India (All-Time)</div>
+                </div>
+                <div class="funding-card fade-in">
+                    <div class="funding-amount">$9B</div>
+                    <div class="funding-label">Europe (All-Time)</div>
+                </div>
+                <div class="funding-card fade-in fade-in-delay-1">
+                    <div class="funding-amount">1,153</div>
+                    <div class="funding-label">Deals in 2024</div>
+                </div>
+            </div>
+
+            <div class="insight-box fade-in fade-in-delay-2">
+                <h3><i class="fas fa-chart-line"></i> Investment Trend Analysis</h3>
+                <ul>
+                    <li><i class="fas fa-arrow-up"></i> <strong>First YoY increase</strong> since 2021 peak</li>
+                    <li><i class="fas fa-arrow-down"></i> <strong>Mega-rounds declined</strong> from 67% (2020) to 10% (2024)</li>
+                    <li><i class="fas fa-exchange-alt"></i> <strong>Shift to quality</strong> - Fewer deals, larger individual investments</li>
+                    <li><i class="fas fa-robot"></i> <strong>AI focus</strong> - Personalized learning R&D accounts for 43% of investment</li>
+                    <li><i class="fas fa-building"></i> <strong>Corporate training</strong> - US e-learning spending exceeded $20B in 2024</li>
+                </ul>
+            </div>
+
+            <div class="timeline fade-in">
+                <h3 style="margin-bottom: 1.5rem;">Investment Timeline</h3>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <strong>2021 - Peak Year</strong>
+                        <p style="color: #6b7280; margin: 0.5rem 0 0;">$20.8 billion invested at the height of pandemic-driven EdTech boom</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <strong>2022-2023 - Market Correction</strong>
+                        <p style="color: #6b7280; margin: 0.5rem 0 0;">Funding dropped 72% to $3B as market consolidated and focused on sustainable business models</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <strong>2024 - Recovery</strong>
+                        <p style="color: #6b7280; margin: 0.5rem 0 0;">First year-over-year increase with $6.3B across 1,153 deals</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Trends Section -->
+    <section class="research-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">🚀 Key EdTech Trends for 2026</h2>
+                <p class="fade-in fade-in-delay-1">The most important trends shaping the future of education technology</p>
+            </div>
+
+            <div class="insight-box fade-in">
+                <h3><i class="fas fa-star"></i> Top 10 Trends to Watch</h3>
+                <ul>
+                    <li><i class="fas fa-graduation-cap"></i> <strong>90% of K-12 schools</strong> will adopt AI-based adaptive learning platforms</li>
+                    <li><i class="fas fa-mobile-alt"></i> <strong>Mobile learning</strong> increased from 42% (2020) to 58% (2023)</li>
+                    <li><i class="fas fa-vr-cardboard"></i> <strong>VR/AR education</strong> growing at 34% annually</li>
+                    <li><i class="fas fa-brain"></i> <strong>Personalized learning</strong> penetration growing from 12% (2018) to 38% (2026)</li>
+                    <li><i class="fas fa-gamepad"></i> <strong>Gamification</strong> adoption increased by 30% in European schools</li>
+                    <li><i class="fas fa-code"></i> <strong>Coding & robotics</strong> programs increased by 55% in Asia</li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> <strong>Smart campus coverage</strong> in China exceeding 70%</li>
+                    <li><i class="fas fa-laptop"></i> <strong>Corporate training</strong> experiencing double-digit growth</li>
+                    <li><i class="fas fa-language"></i> <strong>Language learning platforms</strong> seeing massive user growth (Duolingo: 80M+ users)</li>
+                    <li><i class="fas fa-shield-alt"></i> <strong>Focus on privacy</strong> and security as adoption increases</li>
+                </ul>
+            </div>
+
+            <div class="chart-container">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">Adoption Growth Comparison</h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">Mobile Learning</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 58%;">42% → 58%</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Gamification</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 30%;">+30%</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">VR/AR Learning</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 40%;">+40%</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Coding Programs</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 55%;">+55%</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Online Education (Africa)</div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width: 40%;">+40%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="research-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">⚠️ Challenges & Barriers</h2>
+                <p class="fade-in fade-in-delay-1">Key obstacles facing global EdTech adoption</p>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-value" style="font-size: 2rem;">35%</div>
+                    <div class="stat-label">Rural Schools Lack High-Speed Internet</div>
+                </div>
+                <div class="stat-card fade-in fade-in-delay-1">
+                    <div class="stat-value" style="font-size: 2rem;">30%</div>
+                    <div class="stat-label">Students Without Digital Access (MEA)</div>
+                </div>
+                <div class="stat-card fade-in fade-in-delay-2">
+                    <div class="stat-value" style="font-size: 2rem;">35%</div>
+                    <div class="stat-label">EdTech Cost Increase</div>
+                </div>
+                <div class="stat-card fade-in fade-in-delay-3">
+                    <div class="stat-value" style="font-size: 2rem;">40%</div>
+                    <div class="stat-label">Increase in Cyber Threats</div>
+                </div>
+            </div>
+
+            <div class="insight-box fade-in" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+                <h3><i class="fas fa-exclamation-triangle"></i> Critical Challenges</h3>
+                <ul>
+                    <li><i class="fas fa-times-circle"></i> <strong>Digital Divide</strong> - Developing countries' coverage only 35% of developed nations</li>
+                    <li><i class="fas fa-times-circle"></i> <strong>Infrastructure Gaps</strong> - 30% of schools lack adequate digital infrastructure</li>
+                    <li><i class="fas fa-times-circle"></i> <strong>Rising Costs</strong> - EdTech costs increased 35%, straining budgets</li>
+                    <li><i class="fas fa-times-circle"></i> <strong>Security Concerns</strong> - 40% increase in cyber threats</li>
+                    <li><i class="fas fa-times-circle"></i> <strong>Privacy Issues</strong> - 25% of projects delayed due to privacy concerns</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sources Section -->
+    <section class="research-section" style="background: #f9fafb;">
+        <div class="container">
+            <div class="source-list fade-in">
+                <h4><i class="fas fa-book"></i> Research Sources</h4>
+                <ul>
+                    <li><i class="fas fa-link"></i> McKinsey Global Institute - EdTech Market Analysis</li>
+                    <li><i class="fas fa-link"></i> UNESCO - Global Education Monitoring Report</li>
+                    <li><i class="fas fa-link"></i> Statista - EdTech Market Projections</li>
+                    <li><i class="fas fa-link"></i> IDC - Worldwide Digital Transformation Spending</li>
+                    <li><i class="fas fa-link"></i> GrandView Research - AI in Education Market</li>
+                    <li><i class="fas fa-link"></i> Precedence Research - Global AI Education Market</li>
+                    <li><i class="fas fa-link"></i> HolonIQ - Global EdTech Investment Analysis</li>
+                    <li><i class="fas fa-link"></i> LinkedIn Report - AI Education Growth Trends</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; margin-bottom: 1rem;">Ready to Be Part of the EdTech Revolution?</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.125rem; margin-bottom: 2rem;">Join thousands of educators worldwide who are transforming learning with EduTransform</p>
+            <a href="../index.html#pricing" class="btn" style="background: white; color: #667eea; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; display: inline-block;">Start Free Trial</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>EduTransform</h3>
+                    </div>
+                    <p>Transforming education through AI-powered interactive learning experiences.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="../index.html#features">Features</a></li>
+                        <li><a href="../index.html#pricing">Pricing</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="global-edtech-research.html">Global EdTech Research</a></li>
+                        <li><a href="resources.html">Case Studies</a></li>
+                        <li><a href="resources.html">Best Practices</a></li>
+                        <li><a href="resources.html">Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduTransform. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for educators worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
