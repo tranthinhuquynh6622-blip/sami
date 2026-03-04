@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTransform - AI-Powered Interactive Learning Platform</title>
+    <meta name="description" content="Transform static learning materials into interactive, story-based educational content with AI-powered technology.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    EduTransform
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/how-it-works.html">How It Works</a></li>
+                <li><a href="pages/resources.html">Resources</a></li>
+                <li><a href="#contact" class="btn btn-outline">Contact</a></li>
+                <li><a href="#pricing" class="btn btn-primary">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="fade-in">Transform Static Learning Into <span class="gradient-text">Interactive Adventures</span></h1>
+                    <p class="fade-in fade-in-delay-1">Stop watching students zone out over boring PDFs and slides. Our AI transforms your static materials into engaging, story-based interactive experiences that boost retention by up to 300%.</p>
+                    <div class="hero-buttons fade-in fade-in-delay-2">
+                        <a href="#pricing" class="btn btn-primary btn-large">Start Free Trial</a>
+                        <a href="pages/how-it-works.html" class="btn btn-outline btn-large">
+                            <i class="fas fa-play-circle"></i> See How It Works
+                        </a>
+                    </div>
+                    <div class="hero-stats fade-in fade-in-delay-3">
+                        <div class="stat">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Educators</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2M+</span>
+                            <span class="stat-label">Students</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">300%</span>
+                            <span class="stat-label">Better Retention</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in fade-in-delay-2">
+                    <div class="hero-animation">
+                        <div class="document-transform">
+                            <div class="static-doc">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Static PDF</span>
+                            </div>
+                            <div class="transform-arrow">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <div class="interactive-content">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Interactive Adventure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">The Problem with Traditional Learning Materials</h2>
+                <p class="fade-in fade-in-delay-1">Static content leads to passive learning and poor engagement</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">
+                        <i class="fas fa-battery-quarter"></i>
+                    </div>
+                    <h3>Low Engagement</h3>
+                    <p>Students spend only 20% of their time actively engaged with traditional lecture materials and slides.</p>
+                </div>
+                <div class="problem-card fade-in fade-in-delay-1">
+                    <div class="problem-icon">
+                        <i class="fas fa-chart-line-down"></i>
+                    </div>
+                    <h3>Poor Retention</h3>
+                    <p>Passive learning results in just 5-10% information retention after 24 hours compared to active learning.</p>
+                </div>
+                <div class="problem-card fade-in fade-in-delay-2">
+                    <div class="problem-icon">
+                        <i class="fas fa-user-times"></i>
+                    </div>
+                    <h3>High Dropout</h3>
+                    <p>Online courses with static content see completion rates as low as 3-15% across all demographics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">How Our AI Transforms Your Content</h2>
+                <p class="fade-in fade-in-delay-1">Powered by cutting-edge natural language processing and learning science</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Content Analysis</h3>
+                    <p>Our advanced NLP algorithms analyze your materials to identify key concepts, learning objectives, and knowledge gaps.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Automatic concept extraction</li>
+                        <li><i class="fas fa-check"></i> Learning objective mapping</li>
+                        <li><i class="fas fa-check"></i> Difficulty assessment</li>
+                    </ul>
+                </div>
+                <div class="feature-card fade-in fade-in-delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Story-Based Learning</h3>
+                    <p>Transform dry facts into compelling narratives that contextualize information and create memorable learning experiences.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Character-driven scenarios</li>
+                        <li><i class="fas fa-check"></i> Real-world context</li>
+                        <li><i class="fas fa-check"></i> Emotional engagement</li>
+                    </ul>
+                </div>
+                <div class="feature-card fade-in fade-in-delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Interactive Elements</h3>
+                    <p>Embed quizzes, simulations, and decision points that require active participation and immediate application.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Adaptive quizzes</li>
+                        <li><i class="fas fa-check"></i> Branching scenarios</li>
+                        <li><i class="fas fa-check"></i> Instant feedback</li>
+                    </ul>
+                </div>
+                <div class="feature-card fade-in fade-in-delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Personalized Paths</h3>
+                    <p>AI adapts the learning journey based on individual performance, learning style, and pace preferences.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Adaptive difficulty</li>
+                        <li><i class="fas fa-check"></i> Style customization</li>
+                        <li><i class="fas fa-check"></i> Pacing adjustments</li>
+                    </ul>
+                </div>
+                <div class="feature-card fade-in fade-in-delay-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Track learner progress, identify knowledge gaps, and get actionable insights to improve your content.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Real-time progress</li>
+                        <li><i class="fas fa-check"></i> Performance analytics</li>
+                        <li><i class="fas fa-check"></i> Engagement metrics</li>
+                    </ul>
+                </div>
+                <div class="feature-card fade-in fade-in-delay-5">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Multi-Platform Access</h3>
+                    <p>Seamlessly access interactive content on any device – desktop, tablet, or mobile – without losing progress.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Responsive design</li>
+                        <li><i class="fas fa-check"></i> Offline capability</li>
+                        <li><i class="fas fa-check"></i> LMS integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">Proven Results That Matter</h2>
+                <p class="fade-in fade-in-delay-1">Backed by research and validated by educators worldwide</p>
+            </div>
+            <div class="benefits-content">
+                <div class="benefits-visual fade-in">
+                    <div class="benefit-chart">
+                        <div class="chart-bar" style="height: 20%;">
+                            <span class="chart-label">Static</span>
+                            <span class="chart-value">20%</span>
+                        </div>
+                        <div class="chart-bar chart-bar-highlight" style="height: 85%;">
+                            <span class="chart-label">EduTransform</span>
+                            <span class="chart-value">85%</span>
+                        </div>
+                    </div>
+                    <p class="chart-caption">Student Engagement Rates</p>
+                </div>
+                <div class="benefits-list fade-in fade-in-delay-1">
+                    <div class="benefit-item">
+                        <div class="benefit-number">300%</div>
+                        <h3>Information Retention</h3>
+                        <p>Active, story-based learning leads to 3x better long-term retention compared to passive reading.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-number">4x</div>
+                        <h3>Course Completion</h3>
+                        <p>Interactive courses see 4x higher completion rates than traditional static content delivery.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-number">89%</div>
+                        <h3>Satisfaction Rate</h3>
+                        <p>Students report significantly higher satisfaction and motivation when learning through stories.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-number">60%</div>
+                        <h3>Time Savings</h3>
+                        <p>Educators save 60% of content preparation time while delivering more effective lessons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">Simple, Transparent Pricing</h2>
+                <p class="fade-in fade-in-delay-1">Choose the plan that fits your needs</p>
+            </div>
+            <div class="pricing-toggle">
+                <button class="pricing-toggle-btn active" data-period="monthly">Monthly</button>
+                <button class="pricing-toggle-btn" data-period="yearly">Yearly <span class="save-badge">Save 20%</span></button>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Individual</h3>
+                        <p class="pricing-subtitle">Perfect for teachers and tutors</p>
+                        <div class="price">
+                            <span class="price-amount" data-monthly="29" data-yearly="23">$29</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 100 transformations/month</li>
+                        <li><i class="fas fa-check"></i> All content types supported</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li><i class="fas fa-check"></i> 5GB storage</li>
+                        <li><i class="fas fa-times"></i> Custom branding</li>
+                        <li><i class="fas fa-times"></i> API access</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-full">Start Free Trial</a>
+                </div>
+                <div class="pricing-card pricing-card-popular fade-in fade-in-delay-1">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>School</h3>
+                        <p class="pricing-subtitle">For educational institutions</p>
+                        <div class="price">
+                            <span class="price-amount" data-monthly="149" data-yearly="119">$149</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited transformations</li>
+                        <li><i class="fas fa-check"></i> All content types supported</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics dashboard</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> 100GB storage</li>
+                        <li><i class="fas fa-check"></i> Custom branding</li>
+                        <li><i class="fas fa-times"></i> API access</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-full">Start Free Trial</a>
+                </div>
+                <div class="pricing-card fade-in fade-in-delay-2">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p class="pricing-subtitle">For large organizations</p>
+                        <div class="price">
+                            <span class="price-amount">Custom</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited everything</li>
+                        <li><i class="fas fa-check"></i> White-label solution</li>
+                        <li><i class="fas fa-check"></i> Enterprise analytics</li>
+                        <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                        <li><i class="fas fa-check"></i> Unlimited storage</li>
+                        <li><i class="fas fa-check"></i> Full API access</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-full">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">Trusted by Educators Worldwide</h2>
+                <p class="fade-in fade-in-delay-1">See what teachers and institutions are saying about EduTransform</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"EduTransform completely changed how my students engage with course material. I've seen test scores improve by an average of 35% since implementing interactive content."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Sarah Mitchell">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Sarah Mitchell</h4>
+                            <p>Professor of Biology, Stanford University</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in fade-in-delay-1">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"Our district-wide implementation reached 50,000 students. The platform's ease of use and powerful analytics made it the best investment we've made in educational technology."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Rodriguez">
+                        </div>
+                        <div class="author-info">
+                            <h4>James Rodriguez</h4>
+                            <p>Director of EdTech, Los Angeles Unified School District</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in fade-in-delay-2">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"As a corporate trainer, I needed a way to make compliance training engaging. EduTransform helped us achieve 95% completion rates – up from 40% with traditional methods."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Emily Chen</h4>
+                            <p>Learning & Development Manager, Fortune 500 Company</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">Frequently Asked Questions</h2>
+                <p class="fade-in fade-in-delay-1">Find answers to common questions about EduTransform</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>What file formats does EduTransform support?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We support a wide range of formats including PDF, PowerPoint (PPT/PPTX), Word documents (DOC/DOCX), Google Slides, text files, and even scanned documents through OCR technology. Simply upload your materials and our AI will handle the rest.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in fade-in-delay-1">
+                    <button class="faq-question">
+                        <span>How long does it take to transform content?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most transformations are completed within 2-5 minutes, depending on the length and complexity of your content. For large documents (100+ pages), processing may take up to 15 minutes. You'll receive a notification as soon as your content is ready.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in fade-in-delay-2">
+                    <button class="faq-question">
+                        <span>Can I customize the generated content?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! EduTransform provides a full editing suite that allows you to customize every aspect of your interactive content. You can modify narratives, adjust difficulty levels, add your own questions, incorporate multimedia, and brand everything with your colors and logos.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in fade-in-delay-3">
+                    <button class="faq-question">
+                        <span>Is my content secure and private?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, security is our top priority. All content is encrypted in transit and at rest using industry-standard AES-256 encryption. We're SOC 2 Type II certified and GDPR compliant. Your content is never used to train our models without explicit permission, and you maintain full ownership of all transformed content.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in fade-in-delay-4">
+                    <button class="faq-question">
+                        <span>Does EduTransform integrate with learning management systems?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer seamless integrations with all major LMS platforms including Canvas, Blackboard, Moodle, Google Classroom, Schoology, and D2L. You can export content in SCORM, xAPI, or LTI formats for easy deployment within your existing infrastructure.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in fade-in-delay-5">
+                    <button class="faq-question">
+                        <span>What if I'm not satisfied with the transformation?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer a 14-day free trial with full feature access so you can evaluate the platform risk-free. If you're not satisfied with your subscription, we offer a 30-day money-back guarantee. Our support team is also available to help optimize your transformations and ensure you get the best results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content fade-in">
+                <div class="newsletter-text">
+                    <h2>Stay Updated on Educational Innovation</h2>
+                    <p>Join our newsletter for weekly insights on interactive learning, AI in education, and exclusive platform updates.</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-privacy">
+                    <i class="fas fa-lock"></i> We respect your privacy. Unsubscribe anytime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">Get in Touch</h2>
+                <p class="fade-in fade-in-delay-1">Have questions? We're here to help.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>support@edutransform.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Education Lane<br>San Francisco, CA 94102</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM PST</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form fade-in fade-in-delay-1" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>EduTransform</h3>
+                    </div>
+                    <p>Transforming education through AI-powered interactive learning experiences.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="pages/how-it-works.html">How It Works</a></li>
+                        <li><a href="pages/resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduTransform. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for educators worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
